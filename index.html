@@ -6,36 +6,64 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Twitter Typeahead</title>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-<link rel="stylesheet" href="style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<script  type="text/javascript" src="typeahead.js"></script>
-<script  type="text/javascript" src="app.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+  <script src="lib/jquery.min.3.3.1.js"></script>
+  <script src="lib/popper.min.js"></script>
+    <script src="lib/bootstrap.min.4.1.3.js"></script>
+<script  type="text/javascript" src="lib/typeahead.js"></script>
+<script  type="text/javascript" src="lib/configuration.js"></script>
+<script  type="text/javascript" src="lib/app.js"></script>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-
     <div class="bs-example">
 	<div class='container' align='center'>
-		<h4><span class="badge badge-default"><u>f r e e d o m</u>&nbsp;&nbsp;#  <u>s e a r c h</u></span></h4>
+		<h3><span class="badge badge-default">f r e e d o m&nbsp;&nbsp;#  s e a r c h</span></h3>
 
 		<br>
-        <input type="text" class="typeahead" autocomplete="off" spellcheck="false" maxlength="20" size="20" id='searchtxt'>
-		 <button type="submit" class="search btn btn-outline-primary" onclick="myFunction()">
-                        <i class="fa fa-search"></i>
+
+
+        <div class="input-group">
+  <input type="text"  class="typeahead" autocomplete="off" spellcheck="false" maxlength="20" size="20" id='searchtxt' onchange="enableSearch()">
+            <!--
+               <div class="input-group-btn">
+                 <button class="btn btn-default" type="submit">
+                   <i class="glyphicon glyphicon-search"></i>
+                 </button>
+               </div>
+             </div>-->
+     <button type="submit" class="search btn btn-outline-primary" onclick="myFunction()">
+                      <i class="glyphicon glyphicon-search" style="visibility:hidden"></i>
                     </button>
+                     </div>
 					<p id="demo"></p>
     </div>
 	</div>
-	
+
 	<script>
+  function enableSearch() {
+    var entered=document.getElementById("searchtxt");
+    if(entered.value.length >3)
+    {
+
+     entered.style.visibility = "visible";
+       alert('i am called ')
+}
+    if(entered.value.length==0)
+    {
+//	document.getElementById("searchtxt").disabled = true;
+  //document.getElementById("demo").innerHTML = ''
+   document.getElementById("searchtxt").style.visibility = "hidden";
+    }
+  }
 function myFunction() {
 
-var txt = '{"name":"John", "age":30, "city":"New York"}'
-var obj=document.getElementById("searchtxt").value;
 
+var obj=document.getElementById("searchtxt").value;
 //console.log(JSON.parse(document.getElementById("searchtxt").value));
   //var searchvalue = JSON.parse(txt);
  // console.log(searchvalue)
@@ -43,4 +71,4 @@ var obj=document.getElementById("searchtxt").value;
 }
 </script>
 </body>
-</html>                            
+</html>

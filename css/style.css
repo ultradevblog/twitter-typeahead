@@ -7,6 +7,16 @@
 	position: relative;
 	margin: 100px;
 }
+.serachbar
+{
+  border: 2px solid #CCCCCC;
+	border-radius: 8px;
+	font-size: 16px; /* Set input font size */
+  outline: medium none;
+	padding: 8px 12px;
+	width: 400px;
+}
+
 .typeahead, .tt-query, .tt-hint {
 	border: 2px solid #CCCCCC;
 	border-radius: 8px;
@@ -19,11 +29,11 @@
 }
 
 .search{
-	
+
 	height: 30px;
 	line-height: 30px;
 	padding: 0px 12px;
-	
+
 
 
 }
