@@ -5,7 +5,7 @@
     font-weight: bold;
     text-decoration: none;
     padding-top: 2px;
- 
+
 	vertical-align: bottom;
 }
 
@@ -16,7 +16,7 @@
     font-weight: bold;
     text-decoration: none;
     color: #858585;
-    
+
     padding-top: 0px;
     vertical-align: bottom;
 }
@@ -29,29 +29,30 @@
     font-weight: bold;
     text-decoration: none;
     color: skyblue;
-    
+
     padding-top: 0px;
     vertical-align: bottom;
 }
-#customers {
+
+#results {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
 
-#customers td, #customers th {
+#results td, #results th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#results tr:nth-child(even){background-color: #f2f2f2;}
 
-#customers tr:hover {background-color: #ddd;}
+#results tr:hover {background-color: #ddd;}
 
-#customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
+#results th {
+    padding-top: 8px;
+    padding-bottom: 8px;
     text-align: left;
-    background-color: #4CAF50;
+    background-color: #0077b3;
     color: white;
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Global Movie Search</title>
   <meta charset="utf-8">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/style.css">
@@ -12,25 +12,26 @@
 <script  type="text/javascript" src="lib/typeahead.js"></script>
 <script  type="text/javascript" src="lib/configuration.js"></script>
 <script  type="text/javascript" src="lib/app.js"></script>
+<script  type="text/javascript" src="lib/searchapp.js"></script>
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style>
-#customers {
+#results {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
 
-#customers td, #customers th {
+#results td, #results th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#results tr:nth-child(even){background-color: #f2f2f2;}
 
-#customers tr:hover {background-color: #ddd;}
+#results tr:hover {background-color: #ddd;}
 
-#customers th {
+#results th {
     padding-top: 8px;
     padding-bottom: 8px;
     text-align: left;
@@ -49,11 +50,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-     <!--<a href="#" >
-			<img src="att.png" alt="att"
-								style="width: 80px; height: 65px; align: left">
-
-			</a>-->
 			<a  href="#">
                 <span id="logo-title">FREEDOM</span><br>
                 <span id="logo-subtitle">SEARCH</span><br>
@@ -82,11 +78,6 @@
     </div>
   </div>
 </nav>
-<!--
-	 <div class='container ' align='center' >
-<h3><span class="badge badge-success">f r e e d o m&nbsp;&nbsp;#  s e a r c h</span></h3>
-</div>
--->
 <div align='center' >
     <span id="logo-subtitle-tag"><u>Search Movies from global database</u></span>
 
@@ -101,20 +92,11 @@
                      </div>
       <br>
             <br>
-			          
+
 					<div >
         <p id="demo"></p>
-
-
-
-
-
           </div>
     </div>
-
-
-
-
 <div class="container-fluid footer text-center">
 <footer class="container-fluid text-center">
   <div class="legal-notes">
@@ -130,55 +112,11 @@
 								//-->
 								</script> Ultradev Intellectual Property
 						</a><font color='white'> All rights reserved.</font>
-						<!-- AT&amp;T, the AT&amp;T logo and all other
-							AT&amp;T marks contained herein are trademarks of AT&amp;T
-							intellectual property and/or AT&amp;T affiliated companies. All
-							other marks are the property of their respective owners. -->
 					</p>
 
 				</div>
 </footer>
 </div>
-<script>
-  function enableSearch() {
-    var entered=document.getElementById("searchtxt");
-//   alert('i am called '+entered.value.length)
-    if(entered.value.length>0)
-    {
-     document.getElementById("idbutton").style.visibility = "visible";
 
-}
-    if(entered.value.length==0)
-    {
-//	document.getElementById("searchtxt").disabled = true;
-  document.getElementById("demo").innerHTML = ''
-   //document.getElementById("searchtxt").style.visibility = "hidden";
-    document.getElementById("idbutton").style.visibility = "hidden";
-    }
-  }
-function myFunction() {
-var obj=document.getElementById("searchtxt").value;
-//console.log(JSON.parse(document.getElementById("searchtxt").value));
-  //var searchvalue = JSON.parse(txt);
- // console.log(searchvalue)
- $(function() {
-    var table="<table  id='customers' style='width:60%'> <thead ><tr></thead><tbody></th><th>NAME</th> <th>VOTE </th><th>POPULARITY</th><th>LANGUAGE</th><th>RELEASE</th></tr><tr>";
-    $.get("http://api.themoviedb.org/3/search/movie?query="+obj+"&api_key=f22e6ce68f5e5002e71c20bcba477e7d", function(data, status){
-           
-        var results=JSON.stringify(data);
-		var firstResult=JSON.parse(results);
-		var response=firstResult.results[0];
-	table=table+'<td>'+response.title+'</td>'+'<td>'+response.vote_average+'</td>'+'<td>'+response.popularity+'</td>'
-	+'<td>'+response.original_language+'</td>'+'<td>'+response.release_date+'</td></tr></table>'
-	
-   
-	document.getElementById("demo").innerHTML = table;
-})
-})
-;
- 
-  //document.getElementById("demo").innerHTML = obj;
-}
-</script>
 </body>
 </html>
