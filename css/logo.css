@@ -1,0 +1,62 @@
+a:hover {
+  color: hotpink;
+text-decoration: none;
+
+}    /* Remove the navbar's default margin-bottom and rounded borders */
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+  /* Add a gray background color and some padding to the footer */
+  footer {
+    background-color: black;
+    padding: 25px;
+  }
+#logo-title {
+    font-size: 16px;
+    color: #8585ad;
+    line-height: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 2px;
+
+	vertical-align: bottom;
+}
+
+#logo-subtitle {
+    font-size: 18px;
+    padding-left: 2px;
+    line-height: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #8c8c8c;
+
+    padding-top: 0px;
+    vertical-align: bottom;
+}
+
+
+#logo-subtitle-tag {
+    font-size: 18px;
+    padding-left: 2px;
+    line-height: 14px;
+
+    text-decoration: none;
+    color: 	 #3973ac;
+
+    padding-top: 0px;
+    vertical-align: bottom;
+}
+
+#suggestion-dropdown {
+    font-size: 16px;
+    padding-left: 2px;
+    line-height: 14px;
+
+    text-decoration: none;
+    color: 	 #3973ac;
+
+    padding-top: 0px;
+    vertical-align: bottom;
+}

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Twitter Typeahead</title>
-
-<link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/logo.css">
   <script src="lib/jquery.min.3.3.1.js"></script>
   <script src="lib/popper.min.js"></script>
     <script src="lib/bootstrap.min.4.1.3.js"></script>
@@ -16,58 +14,170 @@
 <script  type="text/javascript" src="lib/app.js"></script>
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
 
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: left;
+    background-color: #0077b3;
+    color: white;
+}
+</style>
 </head>
 <body>
-    <div class="bs-example">
-	<div class='container' align='center'>
-		<h3><span class="badge badge-default">f r e e d o m&nbsp;&nbsp;#  s e a r c h</span></h3>
 
-		<br>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <!--<a href="#" >
+			<img src="att.png" alt="att"
+								style="width: 80px; height: 65px; align: left">
 
-
-        <div class="input-group">
-  <input type="text"  class="typeahead" autocomplete="off" spellcheck="false" maxlength="20" size="20" id='searchtxt' onchange="enableSearch()">
-            <!--
-               <div class="input-group-btn">
-                 <button class="btn btn-default" type="submit">
-                   <i class="glyphicon glyphicon-search"></i>
-                 </button>
-               </div>
-             </div>-->
-     <button type="submit" class="search btn btn-outline-primary" onclick="myFunction()">
-                      <i class="glyphicon glyphicon-search" style="visibility:hidden"></i>
-                    </button>
-                     </div>
-					<p id="demo"></p>
+			</a>-->
+			<a  href="#">
+                <span id="logo-title">FREEDOM</span><br>
+                <span id="logo-subtitle">SEARCH</span><br>
+				<br>
+            </a>
     </div>
-	</div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+	  <li ></li>
+	   <li ></li>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
 
-	<script>
+			<div align='center'>
+
+
+		</div>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+
+		<a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--
+	 <div class='container ' align='center' >
+<h3><span class="badge badge-success">f r e e d o m&nbsp;&nbsp;#  s e a r c h</span></h3>
+</div>
+-->
+<div align='center' >
+    <span id="logo-subtitle-tag"><u>Search Movies from global database</u></span>
+
+</div>
+	<div class='container-fluid bs-example' align='center' style="overflow:scroll; height:1270px;width:1280px">
+        <div class="input-group">
+  <input type="text"  class="typeahead" autocomplete="off" spellcheck="false" maxlength="20" size="20" id='searchtxt' onkeypress="enableSearch()" default="search">
+
+
+	 <a onclick="myFunction()" id="idbutton"  style="visibility:hidden">
+     <span class="glyphicon glyphicon-search"></span></a>
+                     </div>
+      <br>
+            <br>
+			          
+					<div >
+        <p id="demo"></p>
+
+
+
+
+
+          </div>
+    </div>
+
+
+
+
+<div class="container-fluid footer text-center">
+<footer class="container-fluid text-center">
+  <div class="legal-notes">
+
+					<p>
+						<a class="footer_underline"
+							href="https://www.att.com/gen/privacy-policy?pid=2587">©
+								<script type="text/javascript">
+								<!--
+									var today = new Date();
+
+									document.write(today.getFullYear());
+								//-->
+								</script> Ultradev Intellectual Property
+						</a><font color='white'> All rights reserved.</font>
+						<!-- AT&amp;T, the AT&amp;T logo and all other
+							AT&amp;T marks contained herein are trademarks of AT&amp;T
+							intellectual property and/or AT&amp;T affiliated companies. All
+							other marks are the property of their respective owners. -->
+					</p>
+
+				</div>
+</footer>
+</div>
+<script>
   function enableSearch() {
     var entered=document.getElementById("searchtxt");
-    if(entered.value.length >3)
+//   alert('i am called '+entered.value.length)
+    if(entered.value.length>0)
     {
+     document.getElementById("idbutton").style.visibility = "visible";
 
-     entered.style.visibility = "visible";
-       alert('i am called ')
 }
     if(entered.value.length==0)
     {
 //	document.getElementById("searchtxt").disabled = true;
-  //document.getElementById("demo").innerHTML = ''
-   document.getElementById("searchtxt").style.visibility = "hidden";
+  document.getElementById("demo").innerHTML = ''
+   //document.getElementById("searchtxt").style.visibility = "hidden";
+    document.getElementById("idbutton").style.visibility = "hidden";
     }
   }
 function myFunction() {
-
-
 var obj=document.getElementById("searchtxt").value;
 //console.log(JSON.parse(document.getElementById("searchtxt").value));
   //var searchvalue = JSON.parse(txt);
  // console.log(searchvalue)
-  document.getElementById("demo").innerHTML = obj;
+ $(function() {
+    var table="<table  id='customers' style='width:60%'> <thead ><tr></thead><tbody></th><th>NAME</th> <th>VOTE </th><th>POPULARITY</th><th>LANGUAGE</th><th>RELEASE</th></tr><tr>";
+    $.get("http://api.themoviedb.org/3/search/movie?query="+obj+"&api_key=f22e6ce68f5e5002e71c20bcba477e7d", function(data, status){
+           
+        var results=JSON.stringify(data);
+		var firstResult=JSON.parse(results);
+		var response=firstResult.results[0];
+	table=table+'<td>'+response.title+'</td>'+'<td>'+response.vote_average+'</td>'+'<td>'+response.popularity+'</td>'
+	+'<td>'+response.original_language+'</td>'+'<td>'+response.release_date+'</td></tr></table>'
+	
+   
+	document.getElementById("demo").innerHTML = table;
+})
+})
+;
+ 
+  //document.getElementById("demo").innerHTML = obj;
 }
 </script>
 </body>
