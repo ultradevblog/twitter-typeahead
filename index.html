@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Global Movie Search</title>
+  <title>Global Company Search</title>
   <meta charset="utf-8">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/style.css">
@@ -12,10 +12,14 @@
 <script  type="text/javascript" src="lib/typeahead.js"></script>
 <script  type="text/javascript" src="lib/configuration.js"></script>
 <script  type="text/javascript" src="lib/app.js"></script>
+    <script  type="text/javascript" src="lib/utility.js"></script>
 <script  type="text/javascript" src="lib/searchapp.js"></script>
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style>
+    img {
+    border-radius: 50%;
+}
 #results {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -62,8 +66,8 @@
       <ul class="nav navbar-nav">
 	  <li ></li>
 	   <li ></li>
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Movies</a></li>
+        <li class="active"><a href="#">Company</a></li>
+        <li><a href="#">Movie</a></li>
         <li><a href="#">Sports</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
@@ -81,12 +85,15 @@
   </div>
 </nav>
 <div align='center' >
-    <span id="logo-subtitle-tag"><u>Search Movies from global database</u></span>
+    <span id="logo-subtitle-tag">search  organizations globally</span>
 
 </div>
-	<div class='container-fluid bs-example' align='center' style="overflow:scroll; height:1270px;width:1280px">
+
+    
+    <!--start of main content -->
+    <div class='container-fluid bs-example maincontent' align='center' class="maincontent">
         <div class="input-group">
-  <input type="text"  class="typeahead" autocomplete="off" spellcheck="false" maxlength="20" size="20" id='searchtxt' onkeypress="enableSearch()" default="search">
+  <input type="text"  class="typeahead" autocomplete="off" spellcheck="false" maxlength="20" size="20" id='searchtxt' placeholder="enter company name to search " onkeypress="enableSearch()" default="search">
 
 
 	 <a onclick="myFunction()" id="idbutton"  style="visibility:hidden">
@@ -99,7 +106,10 @@
         <p id="demo"></p>
           </div>
     </div>
-<div class="container-fluid footer text-center">
+
+    <!--end of main content -->
+    <!--Starts of footer-->
+    <div class="container-fluid footer text-center">
 <footer class="container-fluid text-center">
   <div class="legal-notes">
 
@@ -119,6 +129,6 @@
 				</div>
 </footer>
 </div>
-
+ <!--end of footer-->
 </body>
 </html>

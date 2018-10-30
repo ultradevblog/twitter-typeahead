@@ -11,15 +11,21 @@ text-decoration: none;
   /* Add a gray background color and some padding to the footer */
   footer {
     background-color: black;
-    padding: 25px;
+    padding: 20px;
   }
+
+#companylogo
+{
+    width:30; height:25;   
+}
+
 #logo-title {
     font-size: 16px;
     color: white
     line-height: 14px;
     font-weight: bold;
     text-decoration: none;
-    padding-top: 2px;
+    padding-top: 6px;
 
 	vertical-align: bottom;
 }
@@ -27,10 +33,10 @@ text-decoration: none;
 #logo-subtitle {
     font-size: 18px;
     padding-left: 2px;
-    line-height: 14px;
+    line-height: 12px;
     font-weight: bold;
     text-decoration: none;
-    color:  #8585ad;;
+    color:  darkorange;;
 
     padding-top: 0px;
     vertical-align: bottom;
@@ -38,15 +44,15 @@ text-decoration: none;
 
 
 #logo-subtitle-tag {
-    font-size: 18px;
+    font-size: 20px;
     padding-left: 2px;
     line-height: 14px;
 
-    text-decoration: none;
-    color: 	 #3973ac;
+     color: darkseagreen;
 
     padding-top: 0px;
     vertical-align: bottom;
+    text-shadow: text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue
 }
 
 #suggestion-dropdown {
@@ -59,4 +65,12 @@ text-decoration: none;
 
     padding-top: 0px;
     vertical-align: bottom;
+}
+
+.maincontent{
+    
+    overflow:scroll; height:430px;width:1280px;
+    
+    
+    
 }
